@@ -1,0 +1,24 @@
+'''
+Author:Kevin Hinson
+Description: It's a palindrome detector
+'''
+
+
+#function that compares characters of the entered word
+def pally(word,length):
+    for iter in range(0, length):
+
+        print(word[length-iter-1],",", word[iter])
+        if word[length-iter-1] != word[iter]:
+            return 0
+    return 1
+
+
+word = input("Enter a word to see if it's a palindrome: ")
+length = len(word)
+
+if pally(word,length):
+    print("THIS IS A PALINDROME")
+else:
+    print("THIS IS NOT A PALINDROME")
+
